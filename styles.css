@@ -2,8 +2,8 @@
   --red: #ea5e5e;
   --yellow: #f7ba3e;
   --blue: #56b3b4;
-  --purple: #bf85bf;
-  --background: #1a2b34;
+  --purple: #7a32df;
+  --background: black;
   --gray: #334651;
   --unit: 10px;
   --container-width: 650px;
@@ -26,7 +26,7 @@ body {
   overflow: hidden;
 }
 
-.container:hover::before {
+/* .container:hover::before {
   content: "";
   position: absolute;
   width: 50%;
@@ -37,7 +37,7 @@ body {
 
 .container:hover {
   border: 1px solid white;
-}
+} */
 
 .row {
   height: var(--unit);
@@ -54,6 +54,14 @@ body {
   width: calc(var(--size, 2) * var(--unit));
   background-color: var(--gray);
   border-radius: 1000px;
+}
+
+.cell.size-1 {
+  --size: 1;
+}
+
+.cell.size-2 {
+  --size: 2;
 }
 
 .cell.size-2 {
@@ -92,6 +100,10 @@ body {
   --size: 10;
 }
 
+.cell.size-11 {
+  --size: 11;
+}
+
 .cell.size-12 {
   --size: 12;
 }
@@ -104,12 +116,24 @@ body {
   --size: 14;
 }
 
+.cell.size-15 {
+  --size: 15;
+}
+
 .cell.size-16 {
   --size: 16;
 }
 
+.cell.size-17 {
+  --size: 17;
+}
+
 .cell.size-18 {
   --size: 18;
+}
+
+.cell.size-19 {
+  --size: 19;
 }
 
 .cell.size-20 {
@@ -143,8 +167,14 @@ body {
 .row:nth-child(9) { --delay: 9; --offset: 50px }
 .row:nth-child(10) { --delay: 10; --offset: -150px }
 .row:nth-child(11) { --delay: 11; --offset: 150px }
-.row:nth-child(12) { --delay: 12; --offset: 250px }
-.row:nth-child(13) { --delay: 13; --offset: -250px }
+.row:nth-child(12) { --delay: 12; --offset: -250px }
+.row:nth-child(13) { --delay: 13; --offset: 250px }
+.row:nth-child(14) { --delay: 14; --offset: -50px }
+.row:nth-child(15) { --delay: 15; --offset: 100px }
+.row:nth-child(16) { --delay: 16; --offset: -150px }
+.row:nth-child(17) { --delay: 17; --offset: 50px }
+.row:nth-child(18) { --delay: 18; --offset: -300px }
+.row:nth-child(19) { --delay: 19; --offset: 300px }
 
 .row:nth-child(2n) {
     --direction: -1

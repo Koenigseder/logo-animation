@@ -26,19 +26,6 @@ body {
   overflow: hidden;
 }
 
-/* .container:hover::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  opacity: .5;
-  background: red;
-}
-
-.container:hover {
-  border: 1px solid white;
-} */
-
 .row {
   height: var(--unit);
   display: flex;
@@ -140,20 +127,26 @@ body {
   --size: 20;
 }
 
-.cell.blue {
-  background-color: var(--blue);
-}
-
-.cell.red {
-  background-color: var(--red);
-}
-
-.cell.yellow {
-  background-color: var(--yellow);
-}
-
 .cell.purple {
   background-color: var(--purple);
+}
+
+.container.pulsing .cell.purple {
+  animation: pulsing 500ms calc((var(--delay) - 1) * 50ms) forwards;
+}
+
+@keyframes pulsing {
+  0% {
+    background-color: var(--purple);
+  }
+
+  50% {
+    background-color: var(--red);
+  }
+
+  100% {
+    background-color: var(--purple);
+  }
 }
 
 .row:nth-child(1) { --delay: 1; --offset: 150px }
